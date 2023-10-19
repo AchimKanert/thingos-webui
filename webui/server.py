@@ -7,6 +7,7 @@ from .plugins import display
 from .plugins import update
 from .plugins import webdav
 from .plugins import timezone
+from .plugins import wlan
 
 import os
 
@@ -24,6 +25,7 @@ def main():
          (r"/update", update.handler.UpdateHandler),
          (r"/webdav", webdav.handler.WebdavHandler),
          (r"/timezone", timezone.handler.TimezoneHandler),
+	 (r"/wlan", wlan.handler.WlanHandler),
          (r'/favicon.ico', tornado.web.StaticFileHandler, {'path': settings['static_path']})
   ], **settings)
 

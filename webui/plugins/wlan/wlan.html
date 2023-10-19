@@ -1,0 +1,17 @@
+{% extends "../base.html" %}
+
+
+{% block body %}
+  <form class="w3-container"  action="/wlan" method="POST">
+
+    <label class="w3-text-white"><b>WLAN SSID</b></label>
+    <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="https://..." value="{{ wlan["ssid"] }}" name="ssid" required>
+    
+    <label class="w3-text-white"><b>Password</b></label>
+    <input class="w3-input w3-border w3-margin-bottom" type="password" name="password" required>
+
+    <button class="w3-button w3-round-large w3-grey" style="width:100%">Save</button>
+  
+  </form>
+
+{% end %}
