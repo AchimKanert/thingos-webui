@@ -52,7 +52,7 @@ def writeData(data):
   else:
     lines = f.readlines()
     f.close()
-    f = open("/data/test.conf", "w")
+    f = open(filename, "w")
     for line in lines:
        parts=line.split("=")
        if (len(parts)==2):
@@ -67,5 +67,5 @@ def writeData(data):
             f.write(line) 
     f.close()
 
-  subprocess.Popen(["photoframe.sh","sync"])
+  subprocess.Popen(["reboot"])
 
